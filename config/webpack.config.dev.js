@@ -157,18 +157,13 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 2,
-                  sourceMap: true,
                   modules: true,
-                  localIdentName: '[path][name]---[local]---[hash:base64:5]'
+                  localIdentName: '[path][name]__[local]__[hash:base64:5]'
                 },
               },
               {
                 loader: require.resolve('postcss-loader'),
                 options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  sourceMap: true,
-                  ident: 'postcss',
                   plugins: () => [
                     require('postcss-flexbugs-fixes'),
                     autoprefixer({
@@ -181,7 +176,6 @@ module.exports = {
               {
                 loader: require.resolve('sass-loader'),
                 options: {
-                  sourceMap: true,
                   includePaths: [
                     paths.abstracts,
                     paths.styles
