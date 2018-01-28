@@ -24,16 +24,3 @@ body {
 img {
   max-width: 100%;
 }
-
-.is-hidden {
-  position: absolute;
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-svg[class^="icon-"] {
-  fill: currentColor;
-  stroke: none;
-  max-width: 100%;
-}

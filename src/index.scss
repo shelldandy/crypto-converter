@@ -1,5 +1,14 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@import "abstracts";
+
+:global {
+  @include global-reset;
+  @import "base/general";
+  @import "base/typography";
+  @import "layout/container";
+  @include flex-grid;
+  @import "layout/margin";
+  @import "layout/padding";
+  @import "layout/flexbox";
+  @import "layout/display";
+  @import "layout/font-sizes";
 }

@@ -50,6 +50,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
+    "code": "npm run start",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
