@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import styles from './App.scss';
+import React from 'react';
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import FancyRoute from './components/tools/FancyRoute/FancyRoute'
 
-class App extends Component {
-  render() {
-    return (
-      <div className={styles.App}>
-        <header className={styles.header}>
-          <img src={logo} className={styles.logo} alt="logo" />
-          <h1 className={styles.title}>Welcome to React</h1>
-        </header>
-        <p className={styles.intro}>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+// Views
+import FourOhFour from './views/404'
+import Exchange from './views/Exchange'
+import Summary from './views/Summary'
+
+
+const App = () =>
+  <Router>
+    <Switch>
+      <FancyRoute path='/' exact component={Summary} />
+      <FancyRoute path='/exchange' component={Exchange} />
+      <FancyRoute component={FourOhFour} />
+    </Switch>
+  </Router>
 
 export default App;
