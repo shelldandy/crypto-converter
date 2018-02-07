@@ -1,0 +1,4 @@
+name: revolut
+windows:
+  - editor: eval $EDITOR
+  - next: npm run start
